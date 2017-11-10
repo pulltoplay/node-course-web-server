@@ -37,7 +37,7 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
     res.render('home.hbs', {
-        pageTitle: 'Home page',
+        pageTitle: 'Home',
         welcomeMessage: 'Welcome to the site.',
     });
 });
@@ -50,9 +50,16 @@ app.get('/bad', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-        pageTitle: 'About Page',
+        pageTitle: 'About',
     });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'Projects'
+    });
+});
+
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
